@@ -7,7 +7,7 @@
     tools:context="com.example.arek.calculator.AdvancedModeActivity">
 
     <LinearLayout
-        android:id="@+id/linearLayout2"
+        android:id="@+id/linearLayout3"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="5dp"
@@ -49,7 +49,8 @@
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/green"
                     android:onClick="backspace"
-                    android:text="@string/BSKP" />
+                    android:text="@string/BSKP"
+                    android:layout_weight="1"/>
 
                 <Button
                     android:id="@+id/btnClear"
@@ -57,7 +58,8 @@
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/red"
                     android:onClick="clear"
-                    android:text="@string/CLEAR" />
+                    android:text="@string/CLEAR"
+                    android:layout_weight="1"/>
 
                 <Button
                     android:id="@+id/btnChangeSign"
@@ -65,21 +67,9 @@
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/gray"
                     android:onClick="changeSign"
-                    android:text="@string/CHANGE" />
+                    android:text="@string/CHANGE"
+                    android:layout_weight="1"/>
 
-                <Button
-                    android:id="@+id/btnMul"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="@color/gray"
-                    android:onClick="multiplication"
-                    android:text="@string/MULTIPLICATION" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/btnSin"
@@ -87,69 +77,9 @@
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/gray"
                     android:onClick="sinus"
-                    android:text="@string/SIN" />
+                    android:text="@string/SIN"
+                    android:layout_weight="1"/>
 
-                <Button
-                    android:id="@+id/btnCos"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="@color/gray"
-                    android:onClick="cosinus"
-                    android:text="@string/COS" />
-
-                <Button
-                    android:id="@+id/btnTan"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="@color/gray"
-                    android:onClick="tanges"
-                    android:text="@string/TAN" />
-
-                <Button
-                    android:id="@+id/btnLn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="@color/gray"
-                    android:onClick="naturalLogarithm"
-                    android:text="@string/LN" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/btnSqrt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="@color/gray"
-                    android:onClick="sqrt"
-                    android:text="@string/SQRT" />
-
-                <Button
-                    android:id="@+id/btnExpToSquare"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="@color/gray"
-                    android:onClick="powerToTwo"
-                    android:text="@string/X2" />
-
-                <Button
-                    android:id="@+id/btnExpToY"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="@color/gray"
-                    android:onClick="powerToY"
-                    android:text="@string/XY" />
-
-                <Button
-                    android:id="@+id/btnLog"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="@color/gray"
-                    android:onClick="logarithm"
-                    android:text="@string/LOG" />
             </LinearLayout>
 
             <LinearLayout
@@ -162,29 +92,51 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="addButton7"
-                    android:text="@string/SEVEN" />
+                    android:text="@string/SEVEN"
+                    android:layout_weight="1"/>
 
                 <Button
                     android:id="@+id/btnEight"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="addButton8"
-                    android:text="@string/EIGHT" />
+                    android:text="@string/EIGHT"
+                    android:layout_weight="1"/>
 
                 <Button
                     android:id="@+id/btnNine"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="addButton9"
-                    android:text="@string/NINE" />
+                    android:text="@string/NINE"
+                    android:layout_weight="1"/>
 
                 <Button
-                    android:id="@+id/btnDiv"
+                    android:id="@+id/btnMul"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/gray"
-                    android:onClick="division"
-                    android:text="@string/DIV" />
+                    android:onClick="multiplication"
+                    android:text="@string/MULTIPLICATION"
+                    android:layout_weight="1"/>
+
+                <Button
+                    android:id="@+id/btnExpToSquare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/gray"
+                    android:onClick="powerToTwo"
+                    android:text="@string/X2"
+                    android:layout_weight="1"/>
+
+                <Button
+                    android:id="@+id/btnCos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/gray"
+                    android:onClick="cosinus"
+                    android:text="@string/COS"
+                    android:layout_weight="1"/>
             </LinearLayout>
 
             <LinearLayout
@@ -197,29 +149,51 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="addButton4"
-                    android:text="@string/FOUR" />
+                    android:text="@string/FOUR"
+                    android:layout_weight="1"/>
 
                 <Button
                     android:id="@+id/btnFive"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="addButton5"
-                    android:text="@string/FIVE" />
+                    android:text="@string/FIVE"
+                    android:layout_weight="1"/>
 
                 <Button
                     android:id="@+id/btnSix"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="addButton6"
-                    android:text="@string/SIX" />
+                    android:text="@string/SIX"
+                    android:layout_weight="1"/>
 
                 <Button
-                    android:id="@+id/btnAdd"
+                    android:id="@+id/btnDiv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/gray"
-                    android:onClick="addition"
-                    android:text="@string/ADD" />
+                    android:onClick="division"
+                    android:text="@string/DIV"
+                    android:layout_weight="1"/>
+
+                <Button
+                    android:id="@+id/btnExpToY"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/gray"
+                    android:onClick="powerToY"
+                    android:text="@string/XY"
+                    android:layout_weight="1"/>
+
+                <Button
+                    android:id="@+id/btnLog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/gray"
+                    android:onClick="logarithm"
+                    android:text="@string/LOG"
+                    android:layout_weight="1"/>
             </LinearLayout>
 
             <LinearLayout
@@ -232,21 +206,24 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="addButton1"
-                    android:text="@string/ONE" />
+                    android:text="@string/ONE"
+                    android:layout_weight="1"/>
 
                 <Button
                     android:id="@+id/btnTwo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="addButton2"
-                    android:text="@string/TWO" />
+                    android:text="@string/TWO"
+                    android:layout_weight="1"/>
 
                 <Button
                     android:id="@+id/btnThree"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="addButton3"
-                    android:text="@string/THREE" />
+                    android:text="@string/THREE"
+                    android:layout_weight="1"/>
 
                 <Button
                     android:id="@+id/btnSub"
@@ -254,7 +231,26 @@
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/gray"
                     android:onClick="subtraction"
-                    android:text="@string/SUBTRACTION" />
+                    android:text="@string/SUBTRACTION"
+                    android:layout_weight="1"/>
+
+                <Button
+                    android:id="@+id/btnLn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/gray"
+                    android:onClick="naturalLogarithm"
+                    android:text="@string/LN"
+                    android:layout_weight="1"/>
+
+                <Button
+                    android:id="@+id/btnTan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/gray"
+                    android:onClick="tanges"
+                    android:text="@string/TAN"
+                    android:layout_weight="1"/>
             </LinearLayout>
 
             <LinearLayout
@@ -267,22 +263,45 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="addButton0"
-                    android:text="@string/ZERO" />
+                    android:text="@string/ZERO"
+                    android:layout_weight="1"/>
 
                 <Button
                     android:id="@+id/btnComa"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="addComa"
-                    android:text="@string/COMA" />
+                    android:text="@string/COMA"
+                    android:layout_weight="1"/>
 
                 <Button
                     android:id="@+id/btnEqual"
-                    android:layout_width="fill_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/orange"
                     android:onClick="equal"
-                    android:text="@string/EQUAL" />
+                    android:text="@string/EQUAL"
+                    android:layout_weight="11"/>
+
+                <Button
+                    android:id="@+id/btnAdd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/gray"
+                    android:onClick="addition"
+                    android:text="@string/ADD"
+                    android:layout_weight="1"/>
+
+                <Button
+                    android:id="@+id/btnSqrt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/gray"
+                    android:onClick="sqrt"
+                    android:text="@string/SQRT"
+                    android:layout_weight="1"
+                    />
+
             </LinearLayout>
 
         </LinearLayout>
