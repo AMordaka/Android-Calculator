@@ -7,22 +7,33 @@
     tools:context="com.example.arek.calculator.SimpleModeActivity">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_margin="5dp"
-        android:orientation="vertical">
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
 
         <EditText
             android:id="@+id/textView"
-            android:freezesText="true"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:freezesText="true" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="bottom"
+            android:layout_marginBottom="5sp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -33,13 +44,18 @@
                     android:id="@+id/btnBskp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/green"
                     android:onClick="backspace"
                     android:text="@string/BSKP" />
+
 
                 <Button
                     android:id="@+id/btnClear"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/red"
                     android:onClick="clear"
                     android:text="@string/CLEAR" />
 
@@ -47,6 +63,8 @@
                     android:id="@+id/btnChangeSign"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/gray"
                     android:onClick="changeSign"
                     android:text="@string/CHANGE" />
 
@@ -54,6 +72,8 @@
                     android:id="@+id/btnMul"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/gray"
                     android:onClick="multiplication"
                     android:text="@string/MULTIPLICATION" />
             </LinearLayout>
@@ -67,6 +87,7 @@
                     android:id="@+id/btnSeven"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:onClick="addButton7"
                     android:text="@string/SEVEN" />
 
@@ -74,6 +95,7 @@
                     android:id="@+id/btnEight"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:onClick="addButton8"
                     android:text="@string/EIGHT" />
 
@@ -81,6 +103,7 @@
                     android:id="@+id/btnNine"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:onClick="addButton9"
                     android:text="@string/NINE" />
 
@@ -88,6 +111,8 @@
                     android:id="@+id/btnDiv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/gray"
                     android:onClick="division"
                     android:text="@string/DIV" />
             </LinearLayout>
@@ -101,6 +126,7 @@
                     android:id="@+id/btnFour"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:onClick="addButton4"
                     android:text="@string/FOUR" />
 
@@ -108,6 +134,7 @@
                     android:id="@+id/btnFive"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:onClick="addButton5"
                     android:text="@string/FIVE" />
 
@@ -115,6 +142,7 @@
                     android:id="@+id/btnSix"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:onClick="addButton6"
                     android:text="@string/SIX" />
 
@@ -122,6 +150,8 @@
                     android:id="@+id/btnAdd"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/gray"
                     android:onClick="addition"
                     android:text="@string/ADD" />
             </LinearLayout>
@@ -135,6 +165,7 @@
                     android:id="@+id/btnOne"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:onClick="addButton1"
                     android:text="@string/ONE" />
 
@@ -142,6 +173,7 @@
                     android:id="@+id/btnTwo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:onClick="addButton2"
                     android:text="@string/TWO" />
 
@@ -149,6 +181,7 @@
                     android:id="@+id/btnThree"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:onClick="addButton3"
                     android:text="@string/THREE" />
 
@@ -156,6 +189,8 @@
                     android:id="@+id/btnSub"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/gray"
                     android:onClick="subtraction"
                     android:text="@string/SUBTRACTION" />
             </LinearLayout>
@@ -169,6 +204,7 @@
                     android:id="@+id/btnZero"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:onClick="addButton0"
                     android:text="@string/ZERO" />
 
@@ -176,13 +212,16 @@
                     android:id="@+id/btnComa"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:onClick="addComa"
                     android:text="@string/COMA" />
 
                 <Button
                     android:id="@+id/btnEqual"
-                    android:layout_width="fill_parent"
+                    android:layout_width="175dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:backgroundTint="@color/orange"
                     android:onClick="equal"
                     android:text="@string/EQUAL" />
             </LinearLayout>

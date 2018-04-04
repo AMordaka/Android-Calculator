@@ -10,18 +10,25 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="5dp"
-        android:orientation="vertical">
+        android:gravity="bottom"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="5dp">
 
 
         <EditText
             android:id="@+id/textView"
-            android:freezesText="true"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:freezesText="true"
+            android:gravity="top" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:gravity="bottom"
             android:orientation="vertical">
 
             <LinearLayout
@@ -33,6 +40,7 @@
                     android:id="@+id/btnBskp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="@color/green"
                     android:onClick="backspace"
                     android:text="@string/BSKP" />
 
@@ -40,6 +48,7 @@
                     android:id="@+id/btnClear"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="@color/red"
                     android:onClick="clear"
                     android:text="@string/CLEAR" />
 
@@ -47,6 +56,7 @@
                     android:id="@+id/btnChangeSign"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="@color/gray"
                     android:onClick="changeSign"
                     android:text="@string/CHANGE" />
 
@@ -54,6 +64,7 @@
                     android:id="@+id/btnMul"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="@color/gray"
                     android:onClick="multiplication"
                     android:text="@string/MULTIPLICATION" />
             </LinearLayout>
@@ -67,6 +78,7 @@
                     android:id="@+id/btnSin"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="@color/gray"
                     android:onClick="sinus"
                     android:text="@string/SIN" />
 
@@ -74,6 +86,7 @@
                     android:id="@+id/btnCos"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="@color/gray"
                     android:onClick="cosinus"
                     android:text="@string/COS" />
 
@@ -81,6 +94,7 @@
                     android:id="@+id/btnTan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="@color/gray"
                     android:onClick="tanges"
                     android:text="@string/TAN" />
 
@@ -88,6 +102,7 @@
                     android:id="@+id/btnLn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="@color/gray"
                     android:onClick="naturalLogarithm"
                     android:text="@string/LN" />
             </LinearLayout>
@@ -101,6 +116,7 @@
                     android:id="@+id/btnSqrt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="@color/gray"
                     android:onClick="sqrt"
                     android:text="@string/SQRT" />
 
@@ -108,6 +124,7 @@
                     android:id="@+id/btnExpToSquare"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="@color/gray"
                     android:onClick="powerToTwo"
                     android:text="@string/X2" />
 
@@ -115,6 +132,7 @@
                     android:id="@+id/btnExpToY"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="@color/gray"
                     android:onClick="powerToY"
                     android:text="@string/XY" />
 
@@ -122,6 +140,7 @@
                     android:id="@+id/btnLog"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="@color/gray"
                     android:onClick="logarithm"
                     android:text="@string/LOG" />
             </LinearLayout>
@@ -156,6 +175,7 @@
                     android:id="@+id/btnDiv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="@color/gray"
                     android:onClick="division"
                     android:text="@string/DIV" />
             </LinearLayout>
@@ -190,6 +210,7 @@
                     android:id="@+id/btnAdd"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="@color/gray"
                     android:onClick="addition"
                     android:text="@string/ADD" />
             </LinearLayout>
@@ -224,6 +245,7 @@
                     android:id="@+id/btnSub"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="@color/gray"
                     android:onClick="subtraction"
                     android:text="@string/SUBTRACTION" />
             </LinearLayout>
@@ -251,6 +273,7 @@
                     android:id="@+id/btnEqual"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="@color/orange"
                     android:onClick="equal"
                     android:text="@string/EQUAL" />
             </LinearLayout>

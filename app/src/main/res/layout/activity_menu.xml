@@ -12,33 +12,47 @@
         android:orientation="vertical"
         android:gravity="center">
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/calculator"
+            android:layout_marginBottom="10dp"/>
+
         <Button
             android:id="@+id/buttonSimple"
             android:onClick="moveToSimpleCalc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Simple" />
+            android:text="@string/SIMPLE"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/colorPrimary"/>
 
         <Button
             android:id="@+id/buttonAdvance"
             android:onClick="moveToAdvanceCacl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Advance" />
+            android:text="@string/ADVANCE"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/colorPrimary"/>
 
         <Button
             android:id="@+id/buttonAbout"
             android:onClick="moveToAbout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="About" />
+            android:text="@string/ABOUT"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/colorPrimary"/>
 
         <Button
             android:id="@+id/buttonExit"
             android:onClick="moveToExit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Exit" />
+            android:text="@string/EXIT"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/colorPrimary"/>
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

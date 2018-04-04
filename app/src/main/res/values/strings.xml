@@ -31,4 +31,8 @@
     <string name="X2">x^2</string>
     <string name="XY">x^y</string>
     <string name="LOG">Log</string>
+    <string name="SIMPLE">Simple</string>
+    <string name="ADVANCE">Advance</string>
+    <string name="ABOUT">About</string>
+    <string name="EXIT">Exit</string>
 </resources>
