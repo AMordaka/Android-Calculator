@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Calculator</string>
+    <string name="SIX">6</string>
+    <string name="ADD">+</string>
+    <string name="FIVE">5</string>
+    <string name="FOUR">4</string>
+    <string name="DIV">/</string>
+    <string name="NINE">9</string>
+    <string name="EIGHT">8</string>
+    <string name="SEVEN">7</string>
+    <string name="CHANGE">±</string>
+    <string name="CLEAR">C / CE</string>
+    <string name="BSKP">BSKP</string>
+    <string name="ONE">1</string>
+    <string name="TWO">2</string>
+    <string name="THREE">3</string>
+    <string name="EQUAL">=</string>
+    <string name="app_calc">Aplikacja Kalkulator</string>
+    <string name="created_by">Stworzona na zajęcia PAM</string>
+    <string name="made_by_student_pl">Wykonana przez Studenta Politechniki Łódzkiej</string>
+    <string name="name_author">Arkadiusza Mordaka</string>
+    <string name="ZERO">0</string>
+    <string name="COMA">.</string>
+    <string name="SUBTRACTION">-</string>
+    <string name="MULTIPLICATION">*</string>
+    <string name="SIN">Sin</string>
+    <string name="COS">Cos</string>
+    <string name="TAN">Tan</string>
+    <string name="LN">Ln</string>
+    <string name="SQRT">Sqrt</string>
+    <string name="X2">x^2</string>
+    <string name="XY">x^y</string>
+    <string name="LOG">Log</string>
+</resources>
