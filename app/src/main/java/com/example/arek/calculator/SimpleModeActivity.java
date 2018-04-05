@@ -10,9 +10,13 @@ import android.widget.Toast;
 
 public class SimpleModeActivity extends AppCompatActivity {
 
-
     private static final String OPERATION_NO_SELECT = "Nie wybrano operacji";
     private static final String DIV_BY_ZERO = "Nie mozna dzielic przez zero";
+    private static final String FIRST_NUMBER = "firstNumber";
+    private static final String SECOND_NUMBER = "secondNumber";
+    private static final String CLICK_OPERATION = "clickOperation";
+    private static final String OPERATION = "operation";
+    private static final String INPUT = "input";
 
     private TextView textView;
     private double firstNumber;
@@ -34,89 +38,54 @@ public class SimpleModeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_simple);
         initialize();
         if (savedInstanceState != null) {
-            firstNumber = savedInstanceState.getDouble("firstNumber");
-            secondNumber = savedInstanceState.getDouble("secondNumber");
-            clickOperation = savedInstanceState.getBoolean("clickOperation");
-            String operationString = savedInstanceState.getString("operation");
+            firstNumber = savedInstanceState.getDouble(FIRST_NUMBER);
+            secondNumber = savedInstanceState.getDouble(SECOND_NUMBER);
+            clickOperation = savedInstanceState.getBoolean(CLICK_OPERATION);
+            String operationString = savedInstanceState.getString(OPERATION);
             operation = Operation.valueOf(operationString);
-            input.append(savedInstanceState.getString("input"));
+            input.append(savedInstanceState.getString(INPUT));
         }
     }
 
     @Override
     public void onSaveInstanceState(Bundle outState) {
-        outState.putDouble("firstNumber", firstNumber);
-        outState.putDouble("secondNumber", secondNumber);
-        outState.putBoolean("clickOperation", clickOperation);
-        outState.putString("operation", operation.toString());
-        outState.putString("input", input.toString());
+        outState.putDouble(FIRST_NUMBER, firstNumber);
+        outState.putDouble(SECOND_NUMBER, secondNumber);
+        outState.putBoolean(CLICK_OPERATION, clickOperation);
+        outState.putString(OPERATION, operation.toString());
+        outState.putString(INPUT, input.toString());
         super.onSaveInstanceState(outState);
     }
 
 
     public void multiplication(View view) {
-         if(!clickOperation){
-             if(addFirstNubmer()) {
-                 operation = Operation.MUL;
-                 clickOperation = true;
-             }
-         }
-         else{
-             if(addSecondNubmer()) {
-                 checkOperation();
-             }
-             operation = Operation.MUL;
-         }
-    }
-
-    public void division(View view) {
-        if(!clickOperation){
-            if(addFirstNubmer()) {
-                operation = Operation.DIV;
-                clickOperation = true;
-            }
-        }
-        else{
-            addSecondNubmer();
-            if(secondNumber != 0) {
-                if(addSecondNubmer()) {
-                    checkOperation();
-                }
-                operation = Operation.DIV;
-            }
-            else{
-               addToast(DIV_BY_ZERO);
-            }
-        }
+        addNumbers(Operation.MUL);
     }
 
     public void addition(View view) {
-        if(!clickOperation){
-            if(addFirstNubmer()) {
-                operation = Operation.ADD;
-                clickOperation = true;
-            }
-        }
-        else{
-            if(addSecondNubmer()) {
-                checkOperation();
-            }
-            operation = Operation.ADD;
-        }
+        addNumbers(Operation.ADD);
     }
 
     public void subtraction(View view) {
+        addNumbers(Operation.SUB);
+    }
+
+    public void division(View view) {
+        addNumbers(Operation.DIV);
+    }
+
+    void addNumbers(Operation operation){
         if(!clickOperation){
             if(addFirstNubmer()) {
-                operation = Operation.SUB;
+                this.operation = operation;
                 clickOperation = true;
             }
         }
         else{
             if(addSecondNubmer()) {
-                checkOperation();
+                this.firstNumber = returnResult();
             }
-            operation = Operation.SUB;
+            this.operation = operation;
         }
     }
 
@@ -150,21 +119,6 @@ public class SimpleModeActivity extends AppCompatActivity {
          secondNumber = 0;
          input.setLength(0);
          refreshInput();
-    }
-
-    public void checkOperation(){
-        if(operation.equals(Operation.ADD)){
-            firstNumber += secondNumber;
-        }
-        if(operation.equals(Operation.SUB)){
-            firstNumber -= secondNumber;
-        }
-        if(operation.equals(Operation.MUL)){
-            firstNumber *= secondNumber;
-        }
-        if(operation.equals(Operation.DIV)){
-            firstNumber /= secondNumber;
-        }
     }
 
     public double returnResult(){
